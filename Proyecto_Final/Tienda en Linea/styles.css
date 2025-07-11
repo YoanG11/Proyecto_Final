@@ -1,0 +1,206 @@
+/* Fuente principal y fondo */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to right, #ffecd2, #fcb69f);
+  color: #3a0624;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+/* Encabezado y pie de página */
+header, footer {
+  background-color: #582263;
+  color: rgb(233, 203, 203);
+  padding: 1.5em;
+  text-align: center;
+}
+
+/* Navegación */
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background-color: #caf50d5e;
+}
+
+nav ul li {
+  margin: 0 1em;
+}
+
+nav ul li a {
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  transition: color 0.4s ease, transform 0.4s ease;
+}
+
+nav ul li a:hover {
+  color: #ec92e8;
+  transform: translateY(-5px);
+}
+
+/* Contenido principal */
+main {
+  padding: 2em;
+  background: #8e5296ee;
+}
+
+section {
+  margin-bottom: 3em;
+}
+
+/* Productos */
+.productos-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+  justify-content: center;
+}
+
+.product-card {
+  background: white;
+  border: 2px solid #ffe066;
+  border-radius: 12px;
+  padding: 1em;
+  text-align: center;
+  color: #333;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.product-card h3 {
+  color: #ef476f;
+}
+
+/* Reseñas */
+.grid-reseñas {
+  margin-top: 1em;
+}
+
+.reseña {
+  background-color: #fff;
+  padding: 1em;
+  border-left: 4px solid #0d47a1;
+}
+
+/* Formulario de contacto */
+#contacto form {
+  padding: 0.5em;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 1em;
+  width: 90%;
+  margin: 0 auto;
+}
+
+/* Carrito */
+#lista-carrito li {
+  margin-bottom: 1em;
+  background-color: #fff3cd;
+  padding: 0.5em;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+}
+
+#lista-carrito li img {
+  width: 40px;
+  height: 40px;
+  border-radius: 6px;
+  margin-right: 0.5em;
+  vertical-align: middle;
+}
+
+#lista-carrito button {
+  margin: 0 0.3em;
+  padding: 0.2em 0.5em;
+  font-size: 0.85em;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+#total {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #ef476f;
+  margin-top: 1em;
+}
+
+/* Botones */
+button {
+  background-color: #06d6a0;
+  border: none;
+  border-radius: 8px;
+  padding: 0.5em 1em;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+  margin-top: 0.5em;
+  transition: all 0.3s ease;
+  display: block;
+  margin: 1em auto;
+}
+
+button:hover {
+  background-color: #118ab2;
+  color: white;
+  transform: scale(1.05);
+}
+
+/* Responsivo */
+@media (max-width: 600px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .productos-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #contacto form {
+    width: 90%;
+  }
+
+  body {
+    font-size: 1.1em;
+  }
+}
+.reseña {
+  background-color: #f17272;
+  padding: 1em;
+  border-left: 4px solid #eeb8e7;
+  margin-bottom: 1em;
+  user-select: none;
+}
+
+.stars {
+  margin-top: 0.5em;
+}
+
+.star {
+  font-size: 1.5em;
+  color: #ccc;
+  cursor: pointer;
+  transition: color 0.2s ease;
+  user-select: none;
+}
+
+.star.filled {
+  color: #f1b707; /* amarillo dorado */
+}
+
+.star:hover,
+.star:hover ~ .star {
+  color: #faf097; /* color al pasar el mouse */
+}

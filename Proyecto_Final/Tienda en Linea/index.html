@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="MI TIENDA" />
+  <meta name="keywords" content="TUS MEJORES OFERTAS" />
+  <meta name="author" content="GARCIA" />
+  <meta name="robots" content="index, follow" />
+  <title>MI TIENDA EN LINEA</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    a:focus, button:focus, input:focus, textarea:focus {
+      outline: 3px solid #1976d2;
+      outline-offset: 2px;
+    }
+    .carrito-flotante {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #ff6f61;
+      color: white;
+      border: none;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      font-size: 24px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+      cursor: pointer;
+      z-index: 1000;
+    }
+    .carrito-flotante span {
+      position: absolute;
+      top: -6px;
+      right: -6px;
+      background-color: #1976d2;
+      color: white;
+      font-size: 14px;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+    }
+    .carrito-flotante:hover {
+      background-color: #e65c50;
+    }
+    .videos-superiores {
+      display: flex;
+      gap: 1em;
+      justify-content: center;
+      padding: 1em;
+      flex-wrap: wrap;
+      background-color: #fff5e1;
+    }
+    .videos-superiores video {
+      width: 240px;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>🎁🎁TIENDA EN LINEA🎁🎁</h1>
+    <nav>
+      <ul>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#productos">Productos</a></li>
+        <li><a href="#reseñas">Reseñas</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+        <li><a href="#carrito">Carrito (<span id="contador-carrito">0</span>)</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- NUEVOS VIDEOS -->
+    <section class="videos-superiores">
+      <video controls autoplay muted loop>
+        <source src="promo1.mp4.mp4" type="video/mp4" />
+        Tu navegador no soporta video.
+      </video>
+      <video controls autoplay muted loop>
+        <source src="promo2.m4.mp4" type="video/mp4" />
+        Tu navegador no soporta video.
+      </video>
+      <video controls autoplay muted loop>
+        <source src="promo3.mp4.mp4" type="video/mp4" />
+        Tu navegador no soporta video.
+      </video>
+    </section>
+
+    <section id="inicio">
+      <h2>🎁𝓑𝓲𝓮𝓷𝓿𝓮𝓷𝓲𝓭𝓸 𝓪 𝓷𝓾𝓮𝓼𝓽𝓻𝓪 𝓽𝓲𝓮𝓷𝓭𝓪🎁</h2>
+      <p>DISFRUTA NUESTRAS OFERTAS VARIADAS.</p>
+    
+      </video>
+    </section>
+
+    <section id="productos">
+      <h2>Productos</h2>
+      <div class="productos-container" id="productos-container">
+        <!-- Productos cargados aquí -->
+      </div>
+    </section>
+
+    <section id="reseñas">
+      <h2>Reseñas</h2>
+      <div class="grid-reseñas" id="grid-reseñas">
+        <!-- Reseñas cargadas aquí -->
+      </div>
+    </section>
+
+    <section id="contacto">
+      <h2>Contáctanos</h2>
+      <form id="formulario-contacto" action="https://formspree.io/f/meokyzgz" method="POST">
+        <label>Nombre:<input type="text" name="nombre" required /></label>
+        <label>Correo:<input type="email" name="email" required /></label>
+        <label>Mensaje:<textarea name="mensaje" required></textarea></label>
+        <button type="submit">Enviar</button>
+      </form>
+    </section>
+
+    <section id="carrito">
+      <h2>Tu Carrito</h2>
+      <ul id="lista-carrito"></ul>
+      <p>Total: $<span id="total">0</span></p>
+    </section>
+  </main>
+
+  <button class="carrito-flotante" onclick="document.getElementById('carrito').scrollIntoView({ behavior: 'smooth' });">
+    🛒
+    <span id="contador-carrito-flotante">0</span>
+  </button>
+
+  <footer>
+    <p>&copy; 2025 Tienda en linea. Todos los derechos reservados.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
